@@ -9,7 +9,7 @@ const pinata = pinataSDK(pinataApiKey, pinataApiSecret);
 async function storeImages(imagesFilePath) {
   const fullImagesPath = path.resolve(imagesFilePath);
   const files = fs.readdirSync(fullImagesPath);
-  let reponses = [];
+  let responses = [];
   for (fileIndex in files) {
     const readableStreamForFile = fs.createReadStream(`${fullImagesPath}/${files[fileIndex]}`);
     try {
