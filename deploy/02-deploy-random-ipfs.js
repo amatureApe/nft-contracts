@@ -58,6 +58,7 @@ async function handleTokenUris() {
     tokenUriMetadata.image = `ipfs://${imageUploadResponses[imageUploadResponsesIndex].IpfsHash}`;
     console.log(`Uploading ${tokenUriMetadata.name}...`);
     // store the JSON to IPFS
+    console.log(tokenUriMetadata);
     const metadataUploadResponse = await storeTokenUriMetadata(tokenUriMetadata);
     tokenUris.push(`ipfs://${metadataUploadResponse.IpfsHash}`);
   }
