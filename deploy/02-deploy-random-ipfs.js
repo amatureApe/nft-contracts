@@ -59,7 +59,7 @@ async function handleTokenUris() {
     console.log(`Uploading ${tokenUriMetadata.name}...`);
     // store the JSON to IPFS
     const metadataUploadResponse = await storeTokenUriMetadata(tokenUriMetadata);
-    tokenUris.push(`push://${metadataUploadResponse.IpfsHash}`);
+    tokenUris.push(`ipfs://${metadataUploadResponse.IpfsHash}`);
   }
   console.log("Token URIs Uploaded! They are:");
   console.log(tokenUris);
